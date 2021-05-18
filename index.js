@@ -1,6 +1,3 @@
-/**
- * Module Imports
- */
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
@@ -49,7 +46,7 @@ i18n.configure({
  * Client Events
  */
 client.on("ready", () => {
-  console.log(`${Your Bot is ready!`);
+  console.log(`${client.user.username} ready!`);
   client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" });
 });
 client.on("warn", (info) => console.log(info));
